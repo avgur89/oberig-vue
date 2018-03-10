@@ -1,0 +1,98 @@
+@mixin object-fit($fit: none, $position: null) {
+  -o-object-fit: $fit;
+  object-fit: $fit;
+  @if $position {
+    -o-object-position: $position;
+    object-position: $position;
+    font-family: 'object-fit: ' + $fit +'; object-position: ' + $position + ';'
+  } @else {
+    font-family: 'object-fit: ' + $fit;
+  }
+}
+
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin triangle($color, $borders, $height: (($borders * 2) * 0.866%)) {
+  width: 0;
+  height: 0;
+  border-top: $borders solid transparent;
+  border-left: $height solid $color;
+  border-bottom: $borders solid transparent;
+}
+
+@mixin centerAbsolute() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@mixin gradient-text($hasHover: true, $haswhite: false) {
+  @if $hasHover {
+    background: -webkit-linear-gradient(left,#ab8cc0, #2174b7 33.3%, #50556b 66.6%, #50556b 100%);
+    background-size: 300% 100%;
+    background-position: right 0;
+  } @else {
+    background: -webkit-linear-gradient(left, #50556b 0%, #786266 65%);
+    background-position: right 0;
+  }
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-repeat: no-repeat;
+
+  @if $hasHover {
+    transition: background 1s ease;
+
+    @media (min-width: 1200px) {
+      &:hover {
+        background-position: left 0;
+      }
+    }
+  }
+
+  @if $haswhite {
+    color: white;
+
+    // paint into white color
+    .js-white & {
+      background: none;
+      background-position: right 0 !important;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
+      color: white;
+    }
+  }
+
+  // IE fix
+  .js-iefix & {
+    color: #50556b;
+
+    @if $hasHover {
+      transition: color 1s ease;
+
+      @media (min-width: 1200px) {
+        &:hover {
+          color: #ab8cc0;
+        }
+      }
+    }
+  }
+
+  .js-iefix .nuxt-link-active & {
+    color: #ab8cc0;
+  }
+}
+

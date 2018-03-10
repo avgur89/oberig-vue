@@ -1,0 +1,53 @@
+@import './variables';
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body, html {
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // Opera custom video control issue
+  + div {
+    display: none !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  font-weight: normal;
+}
+ul {
+  -webkit-padding-start: 0;
+}
+
+#__nuxt {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: 100% auto;
+
+  overflow-x: hidden;
+
+  @media (max-width: $minDesktop) {
+    background-size: auto;
+  }
+}

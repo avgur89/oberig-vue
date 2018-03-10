@@ -1,0 +1,18 @@
+# dependencies
+node_modules
+
+# https://github.com/nuxt-community/pwa-module
+sw.*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# logs
+npm-debug.log
+
+# phpstorm project files
+.idea
+
+sw.*
+workbox-*

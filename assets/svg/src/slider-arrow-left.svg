@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="12" viewBox="0 0 32 12">
+  <defs>
+    <linearGradient id="a" x1="11.73" x2="55.25" y1="7778" y2="7778" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#c2cad6"/>
+    </linearGradient>
+    <filter id="b" width="200%" height="200%" x="-50%" y="-50%">
+      <feGaussianBlur in="SourceGraphic" result="SvgjsFeGaussianBlur1018Out" stdDeviation="4"/>
+    </filter>
+    <mask id="c">
+      <path fill="#fff" d="M19 7775v-.27l-.01-.01.01-.01v-.71h.7l.02-.01v.01H48v1H20.73l6.28 6.28-.73.73-7.01-7.01z"/>
+    </mask>
+    <clipPath id="d">
+      <path fill="#fff"
+            d="M17 7784v-12h32v12zm2.27-9l7.01 7.01.73-.73-6.28-6.28H48v-1H19.73l-.01-.01-.01.01H19v.7l-.01.02.01.01v.27z"/>
+    </clipPath>
+  </defs>
+  <path fill="#444344" d="M2 3v-.27l-.01-.01.01-.01V2h.7l.02-.01V2H31v1H3.73L10 9.28l-.73.73L2.27 3z"/>
+  <path fill="#444344" d="M2 3v-.27l-.01-.01.01-.01V2h.7l.02-.01V2H31v1H3.73L10 9.28l-.73.73L2.27 3z"/>
+  <path fill="#444344" d="M2 3v-.27l-.01-.01.01-.01V2h.7l.02-.01V2H31v1H3.73L10 9.28l-.73.73L2.27 3z"/>
+  <path fill="url(#a)" d="M19 7775v-.27l-.01-.01.01-.01v-.71h.7l.02-.01v.01H48v1H20.73l6.28 6.28-.73.73-7.01-7.01z"
+        transform="translate(-17 -7772)"/>
+  <path fill="#5d6672"
+        d="M10 7791v-26h46v26zm9.27-16l7.01 7.01.73-.73-6.28-6.28H48v-1H19.73l-.01-.01-.01.01H19v.7l-.01.02.01.01v.27z"
+        filter="url(#b)" mask="url(&quot;#c&quot;)" transform="translate(-17 -7772)"/>
+  <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2"
+        d="M19 7775v-.27l-.01-.01.01-.01v-.71h.7l.02-.01v.01H48v1H20.73l6.28 6.28-.73.73-7.01-7.01z"
+        clip-path="url(&quot;#d&quot;)" transform="translate(-17 -7772)"/>
+</svg>

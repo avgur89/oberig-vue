@@ -1,0 +1,63 @@
+@import './mixins';
+
+.cleafix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.chunk {
+  display: inline-block;
+}
+
+.chunked_word {
+  white-space: nowrap;
+}
+
+.gradient-text {
+  @include gradient-text();
+
+  &-haswhite {
+    @include gradient-text(true, true);
+  }
+
+  &-nohover {
+    @include gradient-text(false);
+  }
+
+  &--bright {
+    background: -webkit-linear-gradient(left,#ab8cc0, #2174b7 33.3%, #736d7b 66.6%, #736d7b 100%);
+    background-size: 300% 100%;
+    background-position: right 0;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-repeat: no-repeat;
+
+    transition: background 1s ease;
+
+    @media (min-width: 1200px) {
+      &:hover {
+        background-position: left 0;
+      }
+    }
+
+    .js-iefix & {
+      color: #736d7b;
+
+      transition: color 1s ease;
+
+      @media (min-width: 1200px) {
+        &:hover {
+          color: #ab8cc0;
+        }
+      }
+    }
+  }
+}
